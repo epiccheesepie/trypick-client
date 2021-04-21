@@ -1,0 +1,28 @@
+.header {
+    position: relative;
+}
+.header__logo {
+    margin-bottom: var(--title-bot-margin);
+}
+.header__link {
+    display: inline-flex;
+}
+.logo {
+    width: calc(var(--small-size, var(--font-size)) * var(--logo-header)); /* 300 */
+}
+.header__main-text {
+	display: flex;
+	flex-direction: column;
+}
+.header__title {
+	line-height: 1.1;
+    font-size: 3.2em;
+    font-family: 'Montserrat-Bold', sans-serif;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+.header__description {
+	font-size: 0.8em;
+    color: #aaa;
+    margin-top: calc(var(--small-size, var(--font-size)) * var(--big-text-margin));
+}

@@ -1,0 +1,38 @@
+.interface__famous {
+    margin-bottom: 24px;
+}
+.famous__label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+.famous__new-checkbox {
+    left: 0;
+    content: "";
+    width: 34px;
+    height: 34px;
+    border: 1px solid #4a4a4a;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.famous__checkbox {
+    display: none;
+}
+.famous__checkbox:checked + .famous__new-checkbox {
+    background-image: url('../../assets/img/icon_done.png');
+    background-repeat: no-repeat;
+    background-size: 48%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    filter: invert(0.8);
+}
+.famous__text {
+    margin-left: 10px;
+    font-size: .9em;
+    font-family: 'Montserrat-Light', sans-serif;
+    color: #aaa;
+    transition: .2s;
+}
+.famous__text:hover {
+    color: #eee;
+}

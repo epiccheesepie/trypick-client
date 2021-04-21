@@ -1,0 +1,26 @@
+.search-button {
+	font-family: 'Montserrat-ExtraLight', sans-serif;
+	padding: 14px 0;
+	width: 50%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--main-yellow-color);
+    box-shadow: 0px 0px 20px #aaa;
+    cursor: pointer;
+    font-size: 2.4em;
+    color: #000;
+    text-transform: uppercase;
+    transition: ease .4s;
+}
+.search-button:hover {
+	background-color: #e5d11f;
+}
+.search-button:active {
+    box-shadow: 0px 0px 6px #aaa;
+    transition: 0.1s;
+    transform: scale(0.99);
+}
+.search-button a {
+    color: inherit;
+}

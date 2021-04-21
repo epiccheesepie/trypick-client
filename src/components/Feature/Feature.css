@@ -1,0 +1,317 @@
+.content {
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-position-y: 70%;
+	background-position-x: 100%;
+	background-attachment: fixed;
+
+	position: relative;
+	overflow: hidden !important;
+
+	--container: 1058px;
+	--padding: 22px;
+	--padding-container: 36px;
+	--view-padding-container: calc(var(--padding-container) * 2);
+	--title-bot-margin: 20px;
+	--desc-margin: 14px;
+	--interface-item-margin: 14px;
+	--interface-menu-margin: 26px;
+
+	/* значения coefficient от font-size item-search */
+	--item-img: 21.375;
+	--svg: 1.375;
+	--item-brand: 3.125;
+
+	--show-more: 3.425;
+	--show-more-margin: 30px;
+
+	--width-youtube: 600px;
+	--height-youtube: 300px;
+	/* coefficient */
+
+	/* nav */
+	--nav: 3.125;
+	--big-ycc-margin: 0px;
+	--burger-div-margin: 4px;
+	--nav-padding-top: 14px;
+	--nav-padding-left: 22px;
+	--nav-shadow: 0px 0px 3px #4a4a4a;
+	/* nav */
+
+	/* left-interface */
+	--feature-width: 520px;
+	--left-margin-main: var(--feature-width);
+
+	--logo-header: 18.75;
+	--big-text-margin: 0.625;
+
+	--arrow-button: 2.25;
+	--arrow-button-img: 1.25;
+	--arrow-margin: 0.25;
+
+	--selecter-icon: 1.5625;
+	--selecter-popup-height: 345px;
+	--selecter-arrow: 22px;
+
+	--slider-height: 0.875;
+	--slider-thumb-width: 30px;
+
+	--mood-circle: 60px;
+	--mood-img: 1.875;
+
+	--text-height: 58px;
+	/* left-interface */
+}
+.small {
+	--small-size: 16px;
+	font-size: var(--small-size);
+	--big-ycc-margin: 40px;
+}
+.view_list {
+	overflow: hidden;
+}
+.blur {
+	filter: blur(2px);
+}
+
+.interface {
+	transition: var(--timing);
+	width: var(--feature-width);
+	position: fixed;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	box-shadow: 0 0px 12px -1px rgba(0,0,0,1), 0 6px 10px 0 rgba(0,0,0,.3), 0 1px 18px 0 rgba(0,0,0,.3);
+
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+}
+.interface__wrap {
+	padding: var(--padding-container);
+	padding-top: 10px;
+}
+.interface__menu {
+	padding: 10px 0 10px 0;
+    border-bottom: 1px solid rgba(40,40,40,0.7);
+	border-top: 1px solid rgba(40,40,40,0.7);
+	margin: var(--interface-menu-margin) 0;
+}
+
+.view {
+    height: 100%;
+	margin-left: var(--left-margin-main);
+}
+.content__container {
+	width: var(--container);
+}
+.view__list {
+	margin: var(--view-padding-container) auto 0 auto;
+	padding: var(--padding-container) var(--view-padding-container);
+	margin-top: 54px;
+	background-color: rgba(0,0,0,.8);
+}
+
+/* selecters and sliders */
+.item-checkboxes__title, .slider__title {
+    font-size: 1.36em;
+    color: #fff;
+}
+
+/* fulled */
+.full .interface {
+	margin-left: calc(var(--feature-width) * -1);
+}
+.full .square-button--move {
+	visibility: visible;
+	left: var(--padding-container);
+}
+.full .square-button--move .square-button__icon {
+	transform: rotate(0deg);
+	margin-left: var(--margin);
+}
+.full {
+	--left-margin-main: 0px;
+}
+.full, .view, .nav, .full .square-button--move .square-button__icon {
+	transition: var(--timing);
+}
+
+
+@media (min-width: 1920px) { /* больше 1920 */
+	.content {
+		--small-size: 16px;
+		font-size: var(--small-size);
+		background-size: 100%;
+	}
+}
+
+@media (max-width: 1732px) { /* компы */
+	.content {
+		--slider-thumb-width: 25px;
+		--feature-width: 480px;
+		--padding: 20px;
+		--padding-container: 24px;
+
+		--title-bot-margin: 18px;
+		--desc-margin: 12px;
+		--interface-item-margin: 14px;
+		--interface-menu-margin: 24px;
+
+		--selecter-popup-height: 315px;
+
+		--show-more-margin: 26px;
+
+		--width-youtube: 500px;
+		--height-youtube: 250px;
+	}
+
+	.small {
+		--big-ycc-margin: 40px;
+		--small-size: 14px;
+		--container: 858px;
+	}
+}
+
+@media (max-width: 1466px) {
+	.small .view__list {
+		width: auto;
+	}
+}
+
+@media (max-width: 1280px) { /* планшет */
+	.content {
+		--slider-thumb-width: 20px;
+		--feature-width: 410px;
+		--padding: 18px;
+		--padding-container: 20px;
+		--view-padding-container: var(--padding-container);
+
+		--title-bot-margin: 14px;
+		--desc-margin: 10px;
+		--interface-item-margin: 10px;
+		--interface-menu-margin: 20px;
+
+		--nav-padding-top: 12px;
+		--nav-padding-left: 18px;
+
+		--container: 740px;
+
+		--mood-circle: 51.25px;
+
+		--text-height: 48px;
+
+		--selecter-popup-height: 220px;
+		--selecter-arrow: 18px;
+
+		--show-more-margin: 22px;
+	}
+	.small {
+		--small-size: 12px;
+	}
+
+	/* item-search */
+	.small .item-search__content {
+		flex-direction: column;
+	}
+	.small .item-search__foto {
+		width: fit-content;
+    	margin: 0 auto;
+	}
+	.small .item-search__info {
+		margin-left: 0;
+		margin-top: 20px;
+	}
+	.small .item-search__title {
+		align-items: center;
+	}
+}
+
+@media (max-width: 1030px) {
+	.content {
+		--container: auto;
+
+		--nav-padding-top: 7px;
+		--nav-padding-left: 14px;
+
+		--big-ycc-margin: 0;
+
+		--width-youtube: 400px;
+		--height-youtube: 200px;
+	}
+	.interface {
+		background-color: rgba(0,0,0,.85);
+	}
+	.nav__list {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 870px) { /* мобила */
+	.content {
+		--slider-thumb-width: 15px;
+		--feature-width: var(--mobile-min-width);
+		--padding: 16px;
+		--padding-container: 16px;
+		--burger-div-margin: 3px;
+
+		--title-bot-margin: 12px;
+		--desc-margin: 8px;
+		--interface-item-margin: 8px;
+		--interface-menu-margin: 18px;
+
+		--mood-circle: 46.25px;
+		--text-height: 40px;
+
+		--selecter-popup-height: 192px;
+		--selecter-arrow: 16px;
+
+		--show-more-margin: 16px;
+
+		--width-youtube: 300px;
+		--height-youtube: 150px;
+	}
+	.small {
+		--small-size: 10px;
+	}
+
+	/* item-search */
+	.item-search__content {
+		flex-direction: column;
+	}
+	.item-search__foto {
+		width: fit-content;
+    	margin: 0 auto;
+	}
+	.item-search__info {
+		margin-left: 0;
+		margin-top: 20px;
+	}
+	.item-search__title {
+		align-items: center;
+	}
+}
+
+@media (max-width: 754px) {
+	.content {
+		--font-size: 10px;
+		font-size: var(--font-size);
+
+		--big-ycc-margin: 0px;
+	}
+
+	.small {
+		--left-margin-main: auto;
+	}
+	.small .view {
+		width: var(--mobile-min-width);
+	}
+	.small .view__list {
+		background-color: rgba(0,0,0,.48);
+	}
+	.small .nav {
+		width: 100%;
+	}
+	.interface {
+		background-color: rgba(0,0,0,.95);
+	}
+}

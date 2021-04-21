@@ -1,0 +1,96 @@
+.item-checkboxes {
+	padding: var(--interface-item-margin) 0;
+	position: relative;
+}
+.item-checkboxes__form {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+    padding: var(--padding);
+    background-color: rgba(255,255,255,0.16);
+	transition: background 0.2s ease;
+}
+.item-checkboxes__form:hover {
+	background-color: rgba(255,255,255,0.24);
+}
+.ripple {
+	opacity: 0;
+	position: absolute;
+    width: 7px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.16);
+}
+
+.item-checkboxes.active .ripple {
+	opacity: 1;
+    transform: scale(164);
+    transition: opacity, transform .78s cubic-bezier(0,0,.2,1);
+}
+.item-checkboxes.active .item-checkboxes__icon-up {
+	transform: rotate(180deg);
+}
+.item-checkboxes.active .item-checkboxes__form:hover {
+	background-color: rgba(255,255,255,0.16);
+}
+
+.item-checkboxes__icon-up {
+	width: calc(var(--small-size, var(--font-size)) * var(--selecter-icon)); /* 25 */
+	height: calc(var(--small-size, var(--font-size)) * var(--selecter-icon)); /* 25 */
+	transition: var(--timing);
+}
+.item-checkboxes__result {
+	margin-top: var(--desc-margin);
+}
+.result__title {
+	color: #aaa;
+}
+.popup__wrap {
+	display: flex;
+	flex-direction: column;
+}
+.item-checkboxes__popup {
+	position: absolute;
+	width: 100%;
+	/* max-height: 305px; */
+	height: var(--selecter-popup-height);
+    overflow-y: scroll;
+	background-color: var(--wrap-color);
+	z-index: 2;
+}
+
+.popup__text {
+	color: #000;
+}
+.popup__checkbox {
+	display: none;
+}
+.popup__checkbox:checked + .popup__text::before {
+    content: "";
+    position: absolute;
+    right: 10%;
+    background: url(../../assets/img/icon_done.png);
+    background-size: 100%;
+    width: var(--selecter-arrow);
+    height: var(--selecter-arrow);
+}
+.popup__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.3em;
+    cursor: pointer;
+    padding: var(--padding);
+    transition: background 0.2s ease;
+}
+.popup__item:hover {
+	background: #d0d0d0;
+}
+
+.result__arr {
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 1.35;
+}

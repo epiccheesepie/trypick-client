@@ -1,0 +1,21 @@
+.similar {
+    margin: 12px 0;
+    margin-right: 12px;
+}
+.similar input::placeholder {
+    font-family: 'Montserrat-Light', sans-serif;
+    color: #fff700bb;
+}
+.similar input {
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 1.9em;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid var(--main-yellow-color);
+    width: 100%;
+    background: none;
+    outline: none;
+    padding-left: 12px;
+    height: var(--text-height);
+    transition: .4s;
+}

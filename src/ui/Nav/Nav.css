@@ -1,0 +1,154 @@
+.nav {
+	--size: calc(var(--small-size, var(--font-size)) * var(--arrow-button)); /* 36 */
+	--height: calc(var(--small-size, var(--font-size)) * var(--nav)); /* 50 */
+
+	height: var(--height);
+	width: calc(100% - var(--left-margin-main));
+	margin-left: var(--left-margin-main);
+	background-color: rgba(0,0,0,.94);
+	position: fixed;
+	border-bottom: 1px solid var(--main-yellow-color);
+	display: inline-flex;
+	align-items: center;
+	padding: 10px 0;
+	z-index: 2;
+}
+.nav__wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 60px;
+}
+.nav__title {
+	cursor: default;
+	color: #fff;
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Montserrat-Bold', sans-serif;
+    text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 10px 30px 10px 20px;
+	font-size: .9em;
+}
+.nav__shadow {
+	box-shadow: 0px 0px 3px #4a4a4a;
+}
+.nav__item {
+	border-bottom: 1px solid var(--gray-10);
+}
+.nav__link {
+	font-family: 'Montserrat-Light', sans-serif;
+	font-size: .84em;
+	padding: var(--nav-padding-top) var(--nav-padding-left);
+	display: flex;
+}
+.nav__link:hover {
+	opacity: .65;
+    transition: opacity .3s ease;
+}
+.ycc-big {
+	display: flex;
+	align-items: center;
+	margin-left: var(--big-ycc-margin);
+}
+.ycc-big__link {
+	font-family: 'Titillium', sans-serif;
+	font-size: 3em;
+}
+
+.square-button {
+	position: absolute;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	cursor: pointer;
+	width: var(--size);
+	height: var(--size);
+	border: 1px solid var(--main-yellow-color);
+	border-radius: 4px;
+    transition: .2s;
+    box-shadow: 0px 0px 4px #eee;
+}
+.square-button--move {
+    left: var(--padding-container);
+}
+.square-button--burger {
+	right: var(--padding-container);
+	flex-direction: column;
+}
+.square-button--burger div {
+	width: 55%;
+	height: 1px;
+	background-color: var(--main-yellow-color);
+	margin: var(--burger-div-margin) 0;
+}
+.open-burger .square-button--burger div, .square-button--burger div {
+	transition: var(--timing);
+}
+.open-burger .square-button--burger div {
+	position: absolute;
+	margin: 0;
+}
+.open-burger .square-button--burger div:first-child {
+	transform: rotate(45deg);
+}
+.open-burger .square-button--burger div:last-child {
+	transform: rotate(-45deg);
+}
+.square-button:hover {
+    background-color: var(--button-hover);
+}
+.square-button__icon {
+    --margin: calc(var(--small-size, var(--font-size)) * var(--arrow-margin));
+    margin-left: calc(var(--margin) * -1);
+    height: calc(var(--small-size, var(--font-size)) * var(--arrow-button-img)); /* 24 */
+    transform: rotate(180deg);
+    transition: var(--timing);
+}
+
+.nav__list {
+	display: flex;
+	margin-left: 40px;
+}
+.nav__right {
+	display: flex;
+    align-items: center;
+}
+.nav__hidden {
+	background-color: rgba(0,0,0,.94);
+	position: absolute;
+}
+.nav__small {
+	--top: calc(var(--height) + 21px);
+	position: absolute;
+    background: #000;
+    top: var(--top);
+	right: -100%;
+	width: 100%;
+	height: calc(100vh - var(--top));
+	overflow: auto;
+	visibility: hidden;
+}
+.nav__small .nav__hidden {
+	margin-top: 8px;
+	position: relative;
+}
+.nav__small .nav__item {
+	border: none;
+}
+.nav__small .nav__block {
+	padding: 16px 0;
+}
+.nav__small .nav__link {
+	padding-left: var(--padding-container);
+	display: inline-flex;
+}
+.open-burger .nav__small {
+	visibility: visible;
+	right: 0;
+}
+.open-burger, .nav__small {
+	transition: var(--timing);
+}

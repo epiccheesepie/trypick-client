@@ -1,0 +1,202 @@
+@font-face {
+	font-family: 'Montserrat-Black';
+	src: local('Montserrat-Black'), url('./assets/fonts/Montserrat-Black.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-ExtraBold';
+	src: local('Montserrat-ExtraBold'), url('./assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-Bold';
+	src: local('Montserrat-Bold'), url('./assets/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-SemiBold';
+	src: local('Montserrat-SemiBold'), url('./assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-Medium';
+	src: local('Montserrat-Medium'), url('./assets/fonts/Montserrat-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: local('Montserrat-Regular'), url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-Light';
+	src: local('Montserrat-Light'), url('./assets/fonts/Montserrat-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-ExtraLight';
+	src: local('Montserrat-ExtraLight'), url('./assets/fonts/Montserrat-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-Thin';
+	src: local('Montserrat-Thin'), url('./assets/fonts/Montserrat-Thin.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Titillium';
+	src: local('Titillium'), url('./assets/fonts/titilliumwebblack.ttf') format('truetype'),
+		url('./assets/fonts/titilliumwebblack.woff') format('woff'),
+		url('./assets/fonts/titilliumwebblack.woff2') format('woff2');
+}
+
+:root {
+	--font-size: 16px;
+	--left-margin-content: 208px;
+	--min-height: 600px;
+	--min-width: 1124px;
+	--margin-container: auto;
+	--box-title-padding: 34px 22px 0 22px;
+	--timing: .3s ease-in-out;
+	--mobile-min-width: 370px;
+
+	/* colors */
+	--wrap-color: #eee;
+	--main-yellow-color: #fff600;
+	--gray-10: rgba(255,255,255,.1);
+	--gray-30: rgba(255,255,255,.3);
+	--shadow-text: 6px 6px 10px #000;
+	--button-hover: rgba(255,255,255,.14);
+	/* colors */
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-width: var(--mobile-min-width);
+	height: 100%;
+	font-family: 'Montserrat-Regular', sans-serif;
+	font-size: var(--font-size);
+	color: var(--wrap-color);
+	letter-spacing: 0.04em;
+}
+
+*::-webkit-scrollbar {
+	width: 6px;
+}
+*::-webkit-scrollbar-track {
+	background: #333333;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #8d8d8d;
+	/* border-radius: 20px; */
+}
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #808080 #333333;
+}
+
+#root {
+	height: 100%;
+}
+.ps__rail-y {
+	opacity: .6;
+}
+
+/* reset */
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #eee;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+button {
+	background: none;
+}
+/* reset */
+
+@media (min-width: 1920px) { /* больше 1920 */
+	:root {
+		--font-size: 0.86vw;
+		--left-margin-content: 11vw;
+		--min-height: 32.38vw;
+	}
+	.item-page__title {
+		padding-top: 2.7vw;
+	}
+	.item-page {
+		background-size: 100%;
+	}
+	.box__img img {
+		height: 9vw;
+	}
+}
+
+@media (max-width: 1280px) { /* планшет */
+	:root {
+		--font-size: 12px;
+		--left-margin-content: 100px;
+		--min-width: 804px;
+		--box-title-padding: 24px 12px 0 12px;
+	}
+	.box__img img {
+		height: 120px;
+	}
+
+	.footer {
+		--column-margin: 11px;
+	}
+}
+
+@media (max-width: 870px) {
+	:root {
+		--font-size: 10px;
+		--min-width: fit-content;
+		--margin-container: 26px;
+		--left-margin-content: 0;
+		--box-title-padding: 8px 16px 0 16px;
+	}
+	.item-page--left .item-page__title, .item-page--right .item-page__title {
+		justify-content: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.boxes__wrap {
+		flex-wrap: wrap;
+		margin-top: 0;
+	}
+	.box {
+		width: 33.3333%;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.box__img img {
+		height: 90px;
+	}
+
+	.footer {
+		--column-margin: 8px;
+	}
+}
+
+@media (max-width: 670px) { /* телефон */
+	:root {
+		--box-title-padding: 8px 6px 0 6px;
+	}
+	.item-page__boxes {
+		opacity: 1;
+	}
+
+	.footer__menu {
+		flex-wrap: wrap;
+	}
+	.footer__column {
+		width: 50%;
+	}
+}
+
+@media (max-width: 450px) {
+	:root {
+		--font-size: 8px;
+	}
+}

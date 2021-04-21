@@ -1,0 +1,15 @@
+.list__more {
+    margin-top: var(--show-more-margin);
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+.button--more {
+    height: calc(var(--small-size, var(--font-size)) * var(--show-more)); /* 50 */
+}
+.button--more span {
+    font-family: 'Montserrat-SemiBold', sans-serif;
+    font-size: var(--small-size, var(--font-size));
+    letter-spacing: 0.05em;
+    color: #fff;
+}
